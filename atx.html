@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+ 
+    <style>
+        h1 {
+            font-size: 35px !important;
+            color: #2c97de;
+            text-align: center;
+            margin-top: 7% !important;
+            margin-bottom: 5% !important;
+            font-weight: 600 !important;
+        }
+        .content{
+            display: flex;
+            background: #F8F8F8;;
+        }
+        .inner{
+            display: flex;
+        }
+        .accordionMenu {
+            display: flex;
+            flex-direction:column;
+            justify-content:center ;
+        }
+        .accordionMenu input[type=checkbox] {
+            display: none;
+        }
+        .accordionMenu label {
+            display: block;
+            margin: 0 40px 0 40px;
+            line-height: 47px;
+            padding: 0 15px 0 10px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 2px solid #2c97de;
+            display: block;
+            padding: 1px 0px 0px px;
+            font-size: 22px;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+            border-bottom: 2px solid #2c97de;
+        }
+        .first{
+            border-top: 2px solid #2c97de;
+            
+        }
+        .accordionMenu label::after {
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent #2c97de;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            z-index: 10;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+        .accordionMenu .content {
+            max-height: 0;
+            height: 0;
+            overflow: hidden;
+            -webkit-transition: all 2s ease-in-out;
+            -moz-transition: all 2s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+        }
+        .accordionMenu .content .inner {
+            line-height: 1.5;
+            padding: 20px 10px;
+            font-weight: 600;
+            display: block;
+            margin: auto;
+            width: 90%;
+        }
+        .accordionMenu input[type=checkbox]:checked+label:after {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+        .accordionMenu input[type=checkbox]:checked+label+.content {
+            max-height: 2000px;
+            height: auto;
+        }
+        .section{
+            display: flex;
+            align-items: center;
+        }
+        input {
+            display: none;
+        }
+        .inner_images {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+            .wrapper {
+                display: flex;
+                justify-content:space-between;
+                align-items:center;
+            }
+            .wrapper2 {
+                display: flex;
+                justify-content:space-around;
+                align-items:center;
+            }
+            .plot {
+                display: none;
+            }
+
+            .protect_button{
+                background: #ff5400; 
+                border: none;
+                color: white;font-size: larger;   
+                padding: 10px 40px;
+
+            }
+
+
+            @media only screen and (max-width: 768px) {
+                .prot{
+                    display : none;
+                }
+                .wrapper{
+                    align-items:flex-start;
+                    align-self: center;
+                    flex-direction:column;
+                    margin:0 auto;
+                }
+                .wrapper2{
+                    align-items:flex-start;
+                    align-self: center;
+                    flex-direction:column;
+                    margin:0 auto;
+                }
+                .mid-section {
+                    display: none;
+                }
+                .inner{
+                    justify-content:center;
+                    align-items:flex-start;
+                }
+                .title{
+                    text-align:center;
+                }
+                .outerx{
+                    display:flex;
+                    margin: 0 auto;
+                    align-items:center;
+                }
+
+
+            .protect_button{
+                background: #ff5400; 
+                border: none;
+                color: white;font-size: larger;   
+                padding: 10px;
+                margin-top: 10%;
+            }
+            }
+    </style>
+    <h1> Take control with these coverages </h1>
+    <div class="accordionMenu">
+        <!-- 1st menu  -->
+        <input type="checkbox" name="trg1" id="acc1">
+        <label for="acc1" class="first"><div> Commercial General Liability Insurance </div></label>
+        <div class="content" >
+            <div class="inner">
+                <div class="title" style="margin-bottom: 2%"> Covers Accidents such as :</div>
+                <div class="outerx">
+                    <div class="wrapper">
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"
+                                    class="inner_images"></div>
+                                <div class="inner_content"> Body Injury to Third Party</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"> </div>
+                                <div class="inner_content"> Personal Injury</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"></div>
+                                <div class="inner_content"> Property Damage to Third Party</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="mid-section">
+                    <hr>
+                    Why to consider:
+                    <div style="margin-top: 1%"> Someone slips while visiting the frozen foods section of your grocery store
+                        and injures themselves, you'd look to your CGL policy to help with the costs you may incur from the
+                        accident.
+                    </div>
+                    <hr>
+                </div>
+                <div class="outerx">
+                    <div class="wrapper">
+                        <div class="prot"> Lets Protect Your Business against These accidents </div>
+                        <div> </div>
+                        <div style="text-align: right"> <button class="protect_button">
+                                PROTECT MY BUSINESS! </button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd menu -->
+        <input type="checkbox" name="trg1" id="acc2">
+        <label for="acc2"><div>Cyber Risk Insurance</div></label>
+        <div class="content">
+              <div class="inner">
+                <div class="title" style="margin-bottom: 2%"> Covers Accidents such as :</div>
+                <div class="outerx">
+                    <div class="wrapper">
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"
+                                    class="inner_images"></div>
+                                <div class="inner_content"> Lost devices or documentation</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"> </div>
+                                <div class="inner_content"> Breached computer networks</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"></div>
+                                <div class="inner_content"> Corrupted computer systems</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="mid-section">
+                    <hr>
+                    Why to consider:
+                    <div style="margin-top: 1%"> Cyber threats are on the rise, with over one-fifth (21 per cent) of Canadian businesses having experienced a cyber incident. 
+                    </div>
+                    <hr>
+                </div>
+                <div class="outerx">
+                    <div class="wrapper">
+                        <div class="prot"> Lets Protect Your Business against These accidents </div>
+                        <div> </div>
+                        <div style="text-align: right"> <button class="protect_button">
+                                PROTECT MY BUSINESS! </button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3rd menu -->
+        <input type="checkbox" name="trg1" id="acc3">
+        <label for="acc3"><div>Commercial Property Insurance</div></label>
+        <div class="content">
+            <div class="inner">
+                <div class="title" style="margin-bottom: 2%"> Covers Accidents such as :</div>
+                <div class="outerx">
+                    <div class="wrapper2">
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"
+                                    class="inner_images"></div>
+                                <div class="inner_content"> Damage to property</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"> </div>
+                                <div class="inner_content"> Damage to equipment</div>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="mid-section">
+                    <hr>
+                    Why to consider:
+                    <div style="margin-top: 1%">Natural disasters, like fires, winter storms, hail, and flooding, can cause sudden property damage. Your commercial property policy may cover these damages that result from forces outside your control.
+                    </div>
+                    <hr>
+                </div>
+                <div class="outerx">
+                    <div class="wrapper">
+                        <div class="prot"> Lets Protect Your Business against These accidents </div>
+                        <div> </div>
+                        <div style="text-align: right"> <button class="protect_button">
+                                PROTECT MY BUSINESS! </button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 4th menu -->
+        <input type="checkbox" name="trg1" id="acc4">
+        <label for="acc4"><div>Business Interruption Insurance</div></label>
+        <div class="content">
+            <div class="inner">
+                <div class="title" style="margin-bottom: 2%"> Covers Accidents such as :</div>
+                <div class="outerx">
+                    <div class="wrapper2">
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"
+                                    class="inner_images"></div>
+                                <div class="inner_content"> Loss of income after a disaster</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"> </div>
+                                <div class="inner_content"> Loss of equipment</div>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="mid-section">
+                    <hr>
+                    Why to consider:
+                    <div style="margin-top: 1%">Your business suffers a break-in. You discover that the thieves have taken all the equipment you need to produce your goods. After a loss like that, your business will need some time to recover; you’ll need to replace that equipment in order to get back up and running. 
+
+                    </div>
+                    <hr>
+                </div>
+                <div class="outerx">
+                    <div class="wrapper">
+                        <div class="prot"> Lets Protect Your Business against These accidents </div>
+                        <div> </div>
+                        <div style="text-align: right"> <button class="protect_button">
+                                PROTECT MY BUSINESS! </button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 5th menu -->
+        <input type="checkbox" name="trg1" id="acc5">
+        <label for="acc5"><div>Commercial Auto Insurance</div></label>
+        <div class="content">
+            <div class="inner">
+                <div class="title" style="margin-bottom: 2%"> Covers Accidents such as :</div>
+                <div class="outerx">
+                    <div class="wrapper">
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"
+                                    class="inner_images"></div>
+                                <div class="inner_content"> Company auto accidents involving yourself, or your employees
+</div>
+                            </div>
+                            <div class="section">
+                                <div class="icon"><img src="https://nbicro.s3.amazonaws.com/CommercialPropertyInsurance.svg"  class="inner_images"> </div>
+                                <div class="inner_content"> Medical expenses and lost wages from auto accidents</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="mid-section">
+                    <hr>
+                    Why to consider:
+                    <div style="margin-top: 1%"> If your business operations involve the regular use of vehicles – whether you’re a contractor driving between job sites, or a restaurant owner with a fleet of food delivery vehicles – you need the right protection in place to protect yourself, your employees, and your bottom line. 
+                    </div>
+                    <hr>
+                </div>
+                <div class="outerx">
+                    <div class="wrapper">
+                        <div class="prot"> Lets Protect Your Business against These accidents </div>
+                        <div> </div>
+                        <div style="text-align: right"> <button class="protect_button">
+                                PROTECT MY BUSINESS! </button> </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- 6th menu -->
+    </div>
+</body>
+
+</html>
